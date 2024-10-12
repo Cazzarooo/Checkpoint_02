@@ -27,23 +27,23 @@ namespace CP2.Application.Dtos
         {
             RuleFor(x => x.Nome)
                 .MinimumLength(5).WithMessage(x => $"O campo {nameof(x.Nome)} deve ter no mínimo 5 caracteres")
-                .NotEmpty().WithMessage(x => $"O campo {nameof(x.Nome)} não pode ser vazio");
+                .NotEmpty().WithMessage(x => $"O campo {nameof(x.Nome)} não pode ser um valor vazio");
 
             RuleFor(x => x.CNPJ)
-                .NotEmpty().WithMessage(x => $"O campo {nameof(x.CNPJ)} não pode ser vazio");
+                .NotEmpty().WithMessage(x => $"O campo {nameof(x.CNPJ)} não pode ser um valor vazio");
 
             RuleFor(x => x.Endereco)
-                .NotEmpty().WithMessage(x => $"O campo {nameof(x.Endereco)} não pode ser vazio");
+                .NotEmpty().WithMessage(x => $"O campo {nameof(x.Endereco)} não pode ser um valor vazio");
 
             RuleFor(x => x.Telefone)
-                .NotEmpty().WithMessage(x => $"O campo {nameof(x.Telefone)} não pode ser vazio");
+                .NotEmpty().WithMessage(x => $"O campo {nameof(x.Telefone)} não pode ser um valor vazio");
 
             RuleFor(x => x.Email)
-                .MinimumLength(5).WithMessage(x => $"O campo {nameof(x.Email)} deve ter no mínimo 5 caracteres")
-                .NotEmpty().WithMessage(x => $"O campo {nameof(x.Email)} não pode ser vazio");
+                .MinimumLength(5).WithMessage(x => $"O campo {nameof(x.Email)} deve haver no mínimo 5 caracteres")
+                .NotEmpty().WithMessage(x => $"O campo {nameof(x.Email)} não pode ser um valor vazio");
 
             RuleFor(x => x.CriadoEm)
-                .NotEmpty().WithMessage(x => $"O campo {nameof(x.CriadoEm)} não pode ser vazio");
+                .NotEmpty().WithMessage(x => $"O campo {nameof(x.CriadoEm)} não pode ser um valor vazio");
         }
     }
 }

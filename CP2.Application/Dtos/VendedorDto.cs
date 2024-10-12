@@ -30,23 +30,23 @@ namespace CP2.Application.Dtos
         {
             RuleFor(x => x.Nome)
                 .MinimumLength(5).WithMessage(x => $"O campo {nameof(x.Nome)} deve ter no mínimo 5 caracteres")
-                .NotEmpty().WithMessage(x => $"O campo {nameof(x.Nome)} não pode ser vazio");
+                .NotEmpty().WithMessage(x => $"O campo {nameof(x.Nome)} não pode ser um valor vazio");
 
             RuleFor(x => x.Email)
                .MinimumLength(5).WithMessage(x => $"O campo {nameof(x.Email)} deve ter no mínimo 5 caracteres")
-               .NotEmpty().WithMessage(x => $"O campo {nameof(x.Email)} não pode ser vazio");
+               .NotEmpty().WithMessage(x => $"O campo {nameof(x.Email)} não pode ser um valor vazio");
 
             RuleFor(x => x.Telefone)
-                .NotEmpty().WithMessage(x => $"O campo {nameof(x.Telefone)} não pode ser vazio");
+                .NotEmpty().WithMessage(x => $"O campo {nameof(x.Telefone)} não pode ser um valor vazio");
 
             RuleFor(x => x.DataNascimento)
-                .NotEmpty().WithMessage(x => $"O campo {nameof(x.DataNascimento)} não pode ser vazio");
+                .NotEmpty().WithMessage(x => $"O campo {nameof(x.DataNascimento)} não pode ser um valor vazio");
 
             RuleFor(x => x.Endereco)
-                .NotEmpty().WithMessage(x => $"O campo {nameof(x.Endereco)} não pode ser vazio");
+                .NotEmpty().WithMessage(x => $"O campo {nameof(x.Endereco)} não pode ser um valor vazio");
 
             RuleFor(x => x.DataContratacao)
-                .NotEmpty().WithMessage(x => $"O campo {nameof(x.DataContratacao)} não pode ser vazio");
+                .NotEmpty().WithMessage(x => $"O campo {nameof(x.DataContratacao)} não pode ser um valor vazio");
 
             RuleFor(x => x.ComissaoPercentual)
                 .GreaterThan(0).WithMessage(x => $"O campo {nameof(x.ComissaoPercentual)} deve ser maior que zero");
@@ -55,7 +55,7 @@ namespace CP2.Application.Dtos
                 .GreaterThan(0).WithMessage(x => $"O campo {nameof(x.MetaMensal)} deve ser maior que zero");
 
             RuleFor(x => x.CriadoEm)
-                .NotEmpty().WithMessage(x => $"O campo {nameof(x.CriadoEm)} não pode ser vazio");
+                .NotEmpty().WithMessage(x => $"O campo {nameof(x.CriadoEm)} não pode ser um valor vazio");
         }
     }
 }
